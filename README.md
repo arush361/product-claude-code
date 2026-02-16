@@ -1,222 +1,117 @@
-# Claude Code Custom Plugins & Skills
+# CCC - Claude Code Collection
 
-Custom plugins and skills for [Claude Code](https://github.com/anthropics/claude-code).
+A comprehensive collection of **Claude Code skills, agents, and plugins** that extend Claude's capabilities with specialized workflows, document processing, creative design, and productivity tools.
 
-## Available
-
-| Name | Type | Description | Install Command |
-|------|------|-------------|-----------------|
-| [deckling](./plugins/deckling) | Plugin | Generate PPTX presentations using Anthropic Platform Skills API | `/plugin install deckling@ccc` |
-| [mvp-launch](./plugins/mvp-launch) | Plugin | MVP launch readiness checker with `/launch-check` command | `/plugin install mvp-launch@ccc` |
-| [product-management](./plugins/product-management) | Plugin | AI-native PM: competitor research, gap analysis, WINNING prioritization | `/plugin install product-management@ccc` |
-| [excalidraw](./skills/excalidraw) | Skill | Generate architecture diagrams as `.excalidraw` files with optional PNG/SVG export | `/plugin install ccc-skills@ccc` |
-| [streak](./skills/streak) | **Skill + Commands** | Universal challenge tracker with `/streak`, `/streak-new`, etc. | `/plugin install ccc-skills@ccc` |
-
----
-
-## Installation
+## Quick Start
 
 ```bash
-# Add this repo as a marketplace
-/plugin marketplace add ooiyeefei/ccc
+# Add the marketplace
+/plugin marketplace add arush/ccc
 
-# Install the deckling plugin (has /deckling command)
-/plugin install deckling@ccc
-
-# Install the skills collection (includes excalidraw and streak)
+# Install skills
 /plugin install ccc-skills@ccc
+
+# Install the product management plugin
+/plugin install product-management@ccc
 ```
 
----
+## What's Inside
 
-## Plugin: Deckling
+### Skills (19)
 
-Generate and refine PowerPoint presentations using Anthropic's Platform Skills API.
+#### Document Processing
+| Skill | Description |
+|-------|-------------|
+| **xlsx** | Create, edit, and analyze Excel spreadsheets with formulas, formatting, and charts |
+| **docx** | Generate and edit Word documents with precise XML-based formatting |
+| **pptx** | Build and edit PowerPoint presentations with markdown extraction |
+| **pdf** | Read, merge, split, watermark, OCR, and fill PDF forms |
 
-```bash
-/deckling "Quarterly Review - 3 slides"
-/deckling "Change title to 'Q4 Results'" --refine quarterly.pptx
-```
+#### Creative & Design
+| Skill | Description |
+|-------|-------------|
+| **algorithmic-art** | Generate p5.js generative art with seeded randomness and particle systems |
+| **canvas-design** | Create visual art and posters as .pdf/.png using design philosophy |
+| **frontend-design** | Build production-grade web components and pages (React, HTML/CSS) |
+| **brand-guidelines** | Apply Anthropic's official brand colors and typography |
+| **theme-factory** | 10 pre-set professional themes applicable to any artifact |
 
-See [plugins/deckling/README.md](./plugins/deckling/README.md) for full documentation.
+#### Productivity
+| Skill | Description |
+|-------|-------------|
+| **doc-coauthoring** | Structured workflow for collaborative documentation |
+| **internal-comms** | Templates for status reports, newsletters, FAQs, incident reports |
+| **mcp-builder** | Guide for creating MCP servers in Python or Node.js |
+| **skill-creator** | Framework for designing and building new Claude Code skills |
+| **slack-gif-creator** | Generate optimized animated GIFs for Slack |
+| **web-artifacts-builder** | React + Tailwind + shadcn/ui for complex HTML artifacts |
+| **webapp-testing** | Playwright-based browser automation for testing web apps |
+| **excalidraw** | Generate architecture diagrams with optional PNG/SVG export |
+| **product-management** | Lightweight PM skill for product analysis and planning |
 
----
+### Plugins
 
-## Plugin: MVP Launch
+#### Product Management
+AI-native product management for startups. Includes 6 slash commands and 6 specialized agents.
 
-Analyze web app codebases against a battle-tested 10-point MVP launch checklist. Based on "Realistic MVP Launch Checklist (from building 30+ apps)".
+| Command | Purpose |
+|---------|---------|
+| `/pm:analyze` | Scan codebase and interview for product understanding |
+| `/pm:landscape` | Research the competitive landscape |
+| `/pm:gaps` | Identify and score feature gaps using the WINNING filter |
+| `/pm:file` | Batch create GitHub Issues from scored gaps |
+| `/pm:prd` | Generate a full PRD for a feature |
+| `/pm:sync` | Sync current state with GitHub Issues |
 
-```bash
-/launch-check
-```
+**WINNING Score:** `Pain x Timing x Execution Capability` — 40-60 FILE, 25-39 WAIT, 0-24 SKIP
 
-**The 10-Point Checklist:**
-1. Stripe Setup (webhooks, trials, failed payments)
-2. Mobile-First Design (real device testing)
-3. Smooth Onboarding (minimal steps, fast first win)
-4. AI & Automation Stability (retries, error handling)
-5. Critical Emails (welcome, trial-ending, failed payment)
-6. Error Logging (catch bugs before users)
-7. User Feedback Loop (simple form or tool)
-8. Auth & Roles (secure pages, basic roles)
-9. Custom Domain with SSL (no dev URLs)
-10. Real Database & Backups (automated backups)
+**Agents** (bundled with the plugin):
 
-**Philosophy:** "Don't overbuild. Just make it stable, usable, and something people can trust."
+| Agent | Trigger |
+|-------|---------|
+| **6-pager** | Write comprehensive executive documents |
+| **database-query-builder** | Generate and optimize database queries |
+| **incident-investigator** | Root cause analysis and incident investigation |
+| **requirements-refiner** | Iteratively refine technical requirements and specs |
+| **gap-analyst** | Identify and analyze product feature gaps |
+| **research-agent** | Research competitors and market landscape |
 
-See [plugins/mvp-launch/README.md](./plugins/mvp-launch/README.md) for full documentation.
-
----
-
-## Skill: Excalidraw Generator
-
-Generate architecture diagrams from any codebase as `.excalidraw` files, with optional PNG and SVG export.
-
-**After installing ccc-skills, just ask Claude Code:**
-```
-"Generate an architecture diagram for this project"
-"Create an excalidraw diagram of the system"
-"Visualize this codebase as an excalidraw file"
-"Export this diagram to PNG"
-```
-
-**Features:**
-- Analyzes any codebase (Node.js, Python, Java, Go, etc.)
-- No prerequisites - works without existing diagrams or Terraform
-- Proper 90-degree elbow arrows (not curved)
-- Color-coded components by type (database, API, storage, etc.)
-- Dynamic IDs and labels based on discovered components
-- PNG/SVG export via Playwright and `@excalidraw/utils` (no manual upload needed)
-
-See [skills/excalidraw/README.md](./skills/excalidraw/README.md) for quick start guide.
-See [skills/excalidraw/SKILL.md](./skills/excalidraw/SKILL.md) for full documentation.
-
----
-
-## Streak - Challenge Tracker
-
-Universal challenge tracker with flexible cadence, intelligent insights, and cross-challenge learning detection.
-
-### Slash Commands (Recommended)
-
-After installing ccc-skills, use these commands for **reliable, deterministic** triggering:
-
-```bash
-/streak              # Check in to active challenge
-/streak-new          # Create a new challenge (guided)
-/streak-list         # List all challenges
-/streak-switch NAME  # Switch active challenge
-/streak-stats        # View progress and achievements
-/streak-insights     # Cross-challenge insights
-```
-
-### Natural Language (Alternative)
-
-You can also ask Claude Code naturally - it will invoke the skill when relevant:
-```
-"Check in to my challenge"
-"Start a new streak"
-"Show my stats"
-```
-
-### Features
-
-- **Universal**: Works for any challenge type (learning, habits, building, fitness, creative, custom)
-- **Flexible Cadence**: Daily, weekly, or custom N-day intervals per challenge
-- **AI-Powered Insights**: Auto-detects compound learning and semantic connections
-- **Achievements**: Streak badges and milestone rewards
-- **Calendar Export**: Optional .ics file for calendar reminders
-- **Zero Config**: Works locally with no external dependencies
-
-### Example Challenges
-
-- 30 Days of Coding
-- Read 12 Books This Year
-- Morning Meditation Habit
-- Daily Sketching Practice
-
-See [skills/streak/README.md](./skills/streak/README.md) for quick start guide.
-See [skills/streak/SKILL.md](./skills/streak/SKILL.md) for full documentation.
-
----
-
-## Plugin: Product Management
-
-AI-native product management for startups. Process signals, not features.
-
-**After installing ccc-skills, just ask Claude Code:**
-```
-"Analyze my product"
-"Research competitors"
-"Find feature gaps we should build"
-"What should we build next?"
-```
-
-### Key Commands
-
-```bash
-/pm analyze     # Deep product understanding
-/pm landscape   # Market overview + competitors
-/pm gaps        # Batch gap analysis with WINNING scores
-/pm file        # Create GitHub Issues for top priorities
-/pm roadmap     # Organize into Now/Next/Later
-```
-
-### WINNING Filter
-
-Prioritize with objective scoring: `WINNING = Pain × Timing × Execution`
-
-- **40-60**: FILE (high conviction)
-- **25-39**: WAIT (monitor)
-- **0-24**: SKIP (not worth it)
-
-### spec-kit Integration
-
-This skill handles **WHAT to build** (product discovery). For **HOW to build**, use [spec-kit](https://github.com/github/spec-kit):
+## Repository Structure
 
 ```
-/pm file → GitHub Issue → /speckit.specify → /speckit.plan → /speckit.implement
+ccc/
+├── .claude-plugin/
+│   └── marketplace.json        # Marketplace configuration
+├── skills/                     # 19 reusable skills
+│   ├── algorithmic-art/
+│   ├── brand-guidelines/
+│   ├── canvas-design/
+│   ├── doc-coauthoring/
+│   ├── docx/
+│   ├── excalidraw/
+│   ├── frontend-design/
+│   ├── internal-comms/
+│   ├── mcp-builder/
+│   ├── pdf/
+│   ├── pptx/
+│   ├── product-management/
+│   ├── skill-creator/
+│   ├── slack-gif-creator/
+│   ├── theme-factory/
+│   ├── web-artifacts-builder/
+│   ├── webapp-testing/
+│   └── xlsx/
+└── plugins/
+    └── product-management/     # Full PM plugin with commands & agents
 ```
 
-The GitHub Issue IS the handoff—no extra command needed.
+## Technologies
 
-See [plugins/product-management/README.md](./plugins/product-management/README.md) for full documentation.
+- **Documents:** openpyxl, python-docx, python-pptx, pypdf, reportlab
+- **Creative:** p5.js, ReportLab, React, Tailwind CSS, shadcn/ui
+- **Automation:** Playwright, GitHub CLI
+- **Integration:** MCP (Model Context Protocol), Slack API
 
----
+## Author
 
-## Contributing
-
-We welcome contributions! CCC follows a **hybrid contribution model**:
-
-| Contribution Type | Process |
-|-------------------|---------|
-| Bug fixes | PRs welcome directly |
-| Documentation | PRs welcome directly |
-| New features | Open issue first for discussion |
-| New skills/plugins | Open issue first for discussion |
-
-**Quick start:**
-1. Fork the repo
-2. Create a branch
-3. Make changes and test with Claude Code
-4. Submit a PR
-
-See [CONTRIBUTING.md](./CONTRIBUTING.md) for detailed guidelines.
-
-### Good First Issues
-
-Look for issues labeled `good first issue` - they're great for getting started!
-
----
-
-## Support
-
-If you find CCC useful, consider supporting its development:
-
-<a href="https://buymeacoffee.com/afYkK7e"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" width="130"></a>
-
----
-
-## License
-
-MIT
+**arush** - arush361@gmail.com

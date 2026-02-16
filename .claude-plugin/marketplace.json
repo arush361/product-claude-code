@@ -1,41 +1,61 @@
 {
-  "name": "ccc",
+  "name": "arush-claude-toolkit",
   "owner": {
-    "name": "ooiyeefei",
-    "email": "ooiyeefei@users.noreply.github.com"
+    "name": "arush",
+    "email": "arush361@gmail.com"
   },
   "metadata": {
-    "description": "Custom Claude Code plugins and skills",
-    "version": "1.2.0"
+    "description": "Arush's collection of Claude Code skills, agents, and tasks",
+    "version": "1.0.0"
   },
   "plugins": [
     {
-      "name": "deckling",
-      "description": "Generate professional PPTX presentations using Anthropic Platform Skills API",
-      "source": "./plugins/deckling"
-    },
-    {
-      "name": "product-management",
-      "description": "AI-native product management for startups with WINNING filter, gap analysis, competitor research, and GitHub Issues integration",
-      "source": "./plugins/product-management"
-    },
-    {
-      "name": "ccc-skills",
-      "description": "Collection of skills and commands including Excalidraw diagrams and Streak challenge tracker",
+      "name": "document-skills",
+      "description": "Document processing suite including Excel, Word, PowerPoint, and PDF capabilities",
       "source": "./",
       "strict": false,
       "skills": [
-        "./skills/excalidraw",
-        "./skills/streak"
-      ],
-      "commands": [
-        "./commands/streak.md",
-        "./commands/streak-new.md",
-        "./commands/streak-list.md",
-        "./commands/streak-switch.md",
-        "./commands/streak-stats.md",
-        "./commands/streak-insights.md"
+        "./skills/xlsx",
+        "./skills/docx",
+        "./skills/pptx",
+        "./skills/pdf"
       ]
+    },
+    {
+      "name": "creative-skills",
+      "description": "Creative and design skills including algorithmic art, canvas design, frontend design, brand guidelines, and theme styling",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/algorithmic-art",
+        "./skills/brand-guidelines",
+        "./skills/canvas-design",
+        "./skills/frontend-design",
+        "./skills/theme-factory"
+      ]
+    },
+    {
+      "name": "productivity-skills",
+      "description": "Productivity skills including doc co-authoring, internal comms, MCP building, skill creation, web artifacts, webapp testing, Slack GIFs, Excalidraw diagrams, and product management",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/doc-coauthoring",
+        "./skills/internal-comms",
+        "./skills/mcp-builder",
+        "./skills/skill-creator",
+        "./skills/slack-gif-creator",
+        "./skills/web-artifacts-builder",
+        "./skills/webapp-testing",
+        "./skills/excalidraw",
+        "./skills/product-management"
+      ]
+    },
+    {
+      "name": "product-management",
+      "description": "AI-native product management plugin with competitive analysis, gap scoring, PRD generation, and 4 specialized agents",
+      "source": "./plugins/product-management",
+      "strict": false
     }
   ]
 }
