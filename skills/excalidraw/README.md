@@ -10,8 +10,8 @@ Generate architecture diagrams as `.excalidraw` files from codebase analysis, wi
 # Add the ccc marketplace (if not already added)
 /plugin marketplace add arush361/product-claude-code
 
-# Install the skills collection
-/plugin install ccc-skills@ccc
+# Install the productivity skills (includes excalidraw)
+/plugin install productivity-skills@arush-claude-toolkit
 ```
 
 ## Quick Start

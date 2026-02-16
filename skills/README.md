@@ -18,8 +18,10 @@ Skills are bundled as a plugin for easy installation:
 # Add the marketplace
 /plugin marketplace add arush361/product-claude-code
 
-# Install the skills plugin
-/plugin install ccc-skills@ccc
+# Install skill bundles
+/plugin install document-skills@arush-claude-toolkit
+/plugin install creative-skills@arush-claude-toolkit
+/plugin install productivity-skills@arush-claude-toolkit
 ```
 
 ## Usage

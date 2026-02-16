@@ -6,13 +6,15 @@ A comprehensive collection of **Claude Code skills, agents, and plugins** that e
 
 ```bash
 # Add the marketplace
-/plugin marketplace add arush/ccc
+/plugin marketplace add arush361/product-claude-code
 
-# Install skills
-/plugin install ccc-skills@ccc
+# Install skill bundles
+/plugin install document-skills@arush-claude-toolkit
+/plugin install creative-skills@arush-claude-toolkit
+/plugin install productivity-skills@arush-claude-toolkit
 
 # Install the product management plugin
-/plugin install product-management@ccc
+/plugin install product-management@arush-claude-toolkit
 ```
 
 ## What's Inside
