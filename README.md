@@ -1,6 +1,6 @@
-# CCC - Claude Code Collection
+# Product Claude Code
 
-A comprehensive collection of **Claude Code skills, agents, and plugins** that extend Claude's capabilities with specialized workflows, document processing, creative design, and productivity tools.
+**A PM's toolkit for Claude Code.** Turn Claude into your product co-pilot — run competitive analysis, score feature gaps, write PRDs, generate stakeholder decks, and draft exec-ready documents, all from your terminal.
 
 ## Quick Start
 
@@ -8,112 +8,111 @@ A comprehensive collection of **Claude Code skills, agents, and plugins** that e
 # Add the marketplace
 /plugin marketplace add arush361/product-claude-code
 
-# Install skill bundles
+# Install everything
+/plugin install product-management@arush-claude-toolkit
 /plugin install document-skills@arush-claude-toolkit
 /plugin install creative-skills@arush-claude-toolkit
 /plugin install productivity-skills@arush-claude-toolkit
-
-# Install the product management plugin
-/plugin install product-management@arush-claude-toolkit
 ```
 
-## What's Inside
+## For Product Managers
 
-### Skills (19)
+### Product Management Plugin
 
-#### Document Processing
-| Skill | Description |
-|-------|-------------|
-| **xlsx** | Create, edit, and analyze Excel spreadsheets with formulas, formatting, and charts |
-| **docx** | Generate and edit Word documents with precise XML-based formatting |
-| **pptx** | Build and edit PowerPoint presentations with markdown extraction |
-| **pdf** | Read, merge, split, watermark, OCR, and fill PDF forms |
+Your day-to-day PM workflows, automated. Six slash commands that take you from codebase to shipped issues.
 
-#### Creative & Design
-| Skill | Description |
-|-------|-------------|
-| **algorithmic-art** | Generate p5.js generative art with seeded randomness and particle systems |
-| **canvas-design** | Create visual art and posters as .pdf/.png using design philosophy |
-| **frontend-design** | Build production-grade web components and pages (React, HTML/CSS) |
-| **brand-guidelines** | Apply Anthropic's official brand colors and typography |
-| **theme-factory** | 10 pre-set professional themes applicable to any artifact |
-
-#### Productivity
-| Skill | Description |
-|-------|-------------|
-| **doc-coauthoring** | Structured workflow for collaborative documentation |
-| **internal-comms** | Templates for status reports, newsletters, FAQs, incident reports |
-| **mcp-builder** | Guide for creating MCP servers in Python or Node.js |
-| **skill-creator** | Framework for designing and building new Claude Code skills |
-| **slack-gif-creator** | Generate optimized animated GIFs for Slack |
-| **web-artifacts-builder** | React + Tailwind + shadcn/ui for complex HTML artifacts |
-| **webapp-testing** | Playwright-based browser automation for testing web apps |
-| **excalidraw** | Generate architecture diagrams with optional PNG/SVG export |
-| **product-management** | Lightweight PM skill for product analysis and planning |
-
-### Plugins
-
-#### Product Management
-AI-native product management for startups. Includes 6 slash commands and 6 specialized agents.
-
-| Command | Purpose |
-|---------|---------|
-| `/pm:analyze` | Scan codebase and interview for product understanding |
-| `/pm:landscape` | Research the competitive landscape |
-| `/pm:gaps` | Identify and score feature gaps using the WINNING filter |
-| `/pm:file` | Batch create GitHub Issues from scored gaps |
-| `/pm:prd` | Generate a full PRD for a feature |
-| `/pm:sync` | Sync current state with GitHub Issues |
+| Command | What it does |
+|---------|-------------|
+| `/pm:analyze` | Scan the codebase and build product context through guided interviews |
+| `/pm:landscape` | Research competitors — pulls positioning, pricing, and feature sets |
+| `/pm:gaps` | Identify feature gaps and score them with the WINNING filter |
+| `/pm:file` | Turn scored gaps into GitHub Issues in bulk |
+| `/pm:prd` | Generate a full PRD for any feature |
+| `/pm:sync` | Keep your local state in sync with GitHub Issues |
 
 **WINNING Score:** `Pain x Timing x Execution Capability` — 40-60 FILE, 25-39 WAIT, 0-24 SKIP
 
-**Agents** (bundled with the plugin):
+### Specialized Agents
 
-| Agent | Trigger |
+Agents that handle the heavy lifting so you can focus on decisions.
+
+| Agent | When to use it |
+|-------|---------------|
+| **6-pager** | Write Amazon-style narrative memos for leadership reviews |
+| **requirements-refiner** | Turn vague ideas into detailed, testable requirements |
+| **gap-analyst** | Deep-dive into product feature gaps with structured analysis |
+| **research-agent** | Competitive and market research with sourced findings |
+| **incident-investigator** | Root cause analysis when production breaks |
+| **database-query-builder** | Pull the data you need without writing SQL from scratch |
+
+## Document & Deck Creation
+
+Create the artifacts PMs live in — decks, docs, spreadsheets, and PDFs — without leaving Claude.
+
+| Skill | Use case |
 |-------|---------|
-| **6-pager** | Write comprehensive executive documents |
-| **database-query-builder** | Generate and optimize database queries |
-| **incident-investigator** | Root cause analysis and incident investigation |
-| **requirements-refiner** | Iteratively refine technical requirements and specs |
-| **gap-analyst** | Identify and analyze product feature gaps |
-| **research-agent** | Research competitors and market landscape |
+| **pptx** | Build stakeholder decks, sprint reviews, and pitch presentations |
+| **docx** | Write specs, memos, and strategy docs with proper formatting |
+| **xlsx** | Create prioritization matrices, roadmap spreadsheets, and data analysis |
+| **pdf** | Merge docs, fill forms, extract data from PDFs |
+
+## Communication & Storytelling
+
+| Skill | Use case |
+|-------|---------|
+| **internal-comms** | Status reports, leadership updates, newsletters, FAQs, incident reports |
+| **doc-coauthoring** | Structured co-writing workflow for specs, proposals, and decision docs |
+| **excalidraw** | Architecture diagrams and system visualizations with PNG/SVG export |
+| **slack-gif-creator** | Animated GIFs for Slack — celebrate launches, explain features |
+
+## Design & Prototyping
+
+| Skill | Use case |
+|-------|---------|
+| **frontend-design** | Prototype landing pages, dashboards, and UI components |
+| **canvas-design** | Create posters, visual assets, and one-pagers |
+| **theme-factory** | Apply 10 professional themes to any artifact |
+| **brand-guidelines** | Keep everything on-brand with Anthropic's design system |
+| **algorithmic-art** | Generative art for presentations and marketing |
+| **web-artifacts-builder** | Complex interactive prototypes with React + Tailwind + shadcn/ui |
+
+## Developer-Facing Skills
+
+| Skill | Use case |
+|-------|---------|
+| **webapp-testing** | Validate features with Playwright browser automation |
+| **mcp-builder** | Build MCP servers to integrate external tools |
+| **skill-creator** | Create new Claude Code skills for your team |
 
 ## Repository Structure
 
 ```
-ccc/
+product-claude-code/
 ├── .claude-plugin/
-│   └── marketplace.json        # Marketplace configuration
-├── skills/                     # 19 reusable skills
-│   ├── algorithmic-art/
-│   ├── brand-guidelines/
-│   ├── canvas-design/
-│   ├── doc-coauthoring/
+│   └── marketplace.json          # Marketplace configuration
+├── skills/                       # 19 skills organized by category
+│   ├── xlsx/
 │   ├── docx/
-│   ├── excalidraw/
-│   ├── frontend-design/
-│   ├── internal-comms/
-│   ├── mcp-builder/
-│   ├── pdf/
 │   ├── pptx/
-│   ├── product-management/
-│   ├── skill-creator/
-│   ├── slack-gif-creator/
+│   ├── pdf/
+│   ├── frontend-design/
+│   ├── canvas-design/
 │   ├── theme-factory/
+│   ├── brand-guidelines/
+│   ├── algorithmic-art/
+│   ├── doc-coauthoring/
+│   ├── internal-comms/
+│   ├── excalidraw/
+│   ├── slack-gif-creator/
 │   ├── web-artifacts-builder/
 │   ├── webapp-testing/
-│   └── xlsx/
+│   ├── mcp-builder/
+│   ├── skill-creator/
+│   └── product-management/
 └── plugins/
-    └── product-management/     # Full PM plugin with commands & agents
+    └── product-management/       # Full PM plugin with commands & agents
 ```
-
-## Technologies
-
-- **Documents:** openpyxl, python-docx, python-pptx, pypdf, reportlab
-- **Creative:** p5.js, ReportLab, React, Tailwind CSS, shadcn/ui
-- **Automation:** Playwright, GitHub CLI
-- **Integration:** MCP (Model Context Protocol), Slack API
 
 ## Author
 
-**arush** - arush361@gmail.com
+**Arush** — [github.com/arush361](https://github.com/arush361)
