@@ -16,7 +16,7 @@ Skills are bundled as a plugin for easy installation:
 
 ```bash
 # Add the marketplace
-/plugin marketplace add ooiyeefei/ccc
+/plugin marketplace add arush361/product-claude-code
 
 # Install the skills plugin
 /plugin install ccc-skills@ccc

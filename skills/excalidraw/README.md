@@ -8,7 +8,7 @@ Generate architecture diagrams as `.excalidraw` files from codebase analysis, wi
 
 ```bash
 # Add the ccc marketplace (if not already added)
-/plugin marketplace add ooiyeefei/ccc
+/plugin marketplace add arush361/product-claude-code
 
 # Install the skills collection
 /plugin install ccc-skills@ccc
