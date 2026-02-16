@@ -1,6 +1,6 @@
 # Product Claude Code
 
-**A PM's toolkit for Claude Code.** Turn Claude into your product co-pilot — run competitive analysis, score feature gaps, write PRDs, generate stakeholder decks, and draft exec-ready documents, all from your terminal.
+**A PM's toolkit for Claude Code**, built over 3 months of hands-on product management. Turn Claude into your product co-pilot — run competitive analysis, score feature gaps, write PRDs, generate stakeholder decks, and draft exec-ready documents, all from your terminal.
 
 ## Product Management Plugin
 
@@ -114,5 +114,3 @@ product-claude-code/
 ## Author
 
 **Arush** — [GitHub](https://github.com/arush361) | [LinkedIn](https://www.linkedin.com/in/sharma-arush/)
-
-Built over 3 months of hands-on product management with Claude Code.
