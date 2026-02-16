@@ -2,22 +2,7 @@
 
 **A PM's toolkit for Claude Code.** Turn Claude into your product co-pilot — run competitive analysis, score feature gaps, write PRDs, generate stakeholder decks, and draft exec-ready documents, all from your terminal.
 
-## Quick Start
-
-```bash
-# Add the marketplace
-/plugin marketplace add arush361/product-claude-code
-
-# Install everything
-/plugin install product-management@arush-claude-toolkit
-/plugin install document-skills@arush-claude-toolkit
-/plugin install creative-skills@arush-claude-toolkit
-/plugin install productivity-skills@arush-claude-toolkit
-```
-
-## For Product Managers
-
-### Product Management Plugin
+## Product Management Plugin
 
 Your day-to-day PM workflows, automated. Six slash commands that take you from codebase to shipped issues.
 
@@ -32,7 +17,7 @@ Your day-to-day PM workflows, automated. Six slash commands that take you from c
 
 **WINNING Score:** `Pain x Timing x Execution Capability` — 40-60 FILE, 25-39 WAIT, 0-24 SKIP
 
-### Specialized Agents
+## Specialized Agents
 
 Agents that handle the heavy lifting so you can focus on decisions.
 
@@ -44,6 +29,19 @@ Agents that handle the heavy lifting so you can focus on decisions.
 | **research-agent** | Competitive and market research with sourced findings |
 | **incident-investigator** | Root cause analysis when production breaks |
 | **database-query-builder** | Pull the data you need without writing SQL from scratch |
+
+## Quick Start
+
+```bash
+# Add the marketplace
+/plugin marketplace add arush361/product-claude-code
+
+# Install everything
+/plugin install product-management@arush-claude-toolkit
+/plugin install document-skills@arush-claude-toolkit
+/plugin install creative-skills@arush-claude-toolkit
+/plugin install productivity-skills@arush-claude-toolkit
+```
 
 ## Document & Deck Creation
 
