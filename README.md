@@ -114,3 +114,5 @@ product-claude-code/
 ## Author
 
 **Arush** — [GitHub](https://github.com/arush361) | [LinkedIn](https://www.linkedin.com/in/sharma-arush/)
+
+Built over 3 months of hands-on product management with Claude Code.
