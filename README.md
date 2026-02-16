@@ -113,4 +113,4 @@ product-claude-code/
 
 ## Author
 
-**Arush** — [github.com/arush361](https://github.com/arush361)
+**Arush** — [GitHub](https://github.com/arush361) | [LinkedIn](https://www.linkedin.com/in/sharma-arush/)
