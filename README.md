@@ -47,13 +47,6 @@ Agents that handle the heavy lifting so you can focus on decisions.
 
 Create the artifacts PMs live in — decks, docs, spreadsheets, and PDFs — without leaving Claude.
 
-| Skill | Use case |
-|-------|---------|
-| **pptx** | Build stakeholder decks, sprint reviews, and pitch presentations |
-| **docx** | Write specs, memos, and strategy docs with proper formatting |
-| **xlsx** | Create prioritization matrices, roadmap spreadsheets, and data analysis |
-| **pdf** | Merge docs, fill forms, extract data from PDFs |
-
 ## Communication & Storytelling
 
 | Skill | Use case |
